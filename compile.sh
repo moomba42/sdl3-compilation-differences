@@ -20,7 +20,5 @@ git clone https://github.com/castholm/SDL sdl-zig
 cd sdl-zig || exit
 zig build -Dpreferred_link_mode=dynamic --release=fast
 cd .. || exit
-cp sdl-zig/zig-out/lib/libSDL3.dylib lib/libSDL3-zig.dylib
-# Update the self reference
-install_name_tool -id @rpath/libSDL3-zig.dylib ./lib/libSDL3-zig.dylib
+cp sdl-zig/zig-out/lib/libSDL3.dylib lib/libSDL3.dylib
 
